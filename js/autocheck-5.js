@@ -479,56 +479,80 @@
 //* Публичный метод isBlacklisted(email) для проверки почты в чёрном списке. Метод должен проверять наличие значения параметра email в массиве хранящемся в свойстве blacklistedEmails и возвращать true или false.
 //* После объявления класса мы добавили инициализацию экземпляра и вызовы методов в той последовательности, в которой твой код будут проверять тесты. Пожалуйста ничего там не меняй.
 
-class User {
-  email;
+// class User {
+//   email;
 
-  constructor(email) {
-    this.email = email;
-  }
+//   constructor(email) {
+//     this.email = email;
+//   }
 
-  get email() {
-    return this.email;
-  }
+//   get email() {
+//     return this.email;
+//   }
 
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
 
-class Admin extends User {
+// class Admin extends User {
 
-  static AccessLevel = {
-    BASIC: 'basic',
-    SUPERUSER: 'superuser'
-  };
+//   static AccessLevel = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser'
+//   };
 
-  accessLevel;
-  blacklistedEmails;
+//   accessLevel;
+//   blacklistedEmails;
 
-  constructor({ email, accessLevel }) {
-    super(email);
-    this.accessLevel = accessLevel;
-  }
+//   constructor({ email, accessLevel }) {
+//     super(email);
+//     this.accessLevel = accessLevel;
+//   }
 
-  blacklist(email) {
-    this.blacklistedEmails = [email];
-  }
+//   blacklist(email) {
+//     this.blacklistedEmails = [email];
+//   }
 
-  isBlacklisted(email) {
-     return this.blacklistedEmails.includes(email)
-  }
+//   isBlacklisted(email) {
+//      return this.blacklistedEmails.includes(email)
+//   }
  
+// }
+
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   accessLevel: Admin.AccessLevel.SUPERUSER
+// });
+
+// console.log(mango.email); // mango@mail.com
+// console.log(mango.accessLevel); // superuser
+// mango.blacklist('poly@mail.com');
+// console.log(mango.blacklistedEmails); // 'poly@mail.com'
+// console.log(mango.isBlacklisted('mango@mail.com')); //  false
+// console.log(mango.isBlacklisted('poly@mail.com')); // true 
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  if (card <= 6) {
+    count += 1;
+  } else if (card > 6 || card < 10) {
+    count += 0;
+  } else {
+    count -= 1;
+  }
+
+  if (count >= 0) {
+      console.log(count + ' Bet')
+    return count + 'Bet'
+  } else {
+    console.log(count + ' Hold')
+      return count + 'Hold'
+  }
+
+  // Only change code above this line
 }
 
-const mango = new Admin({
-  email: 'mango@mail.com',
-  accessLevel: Admin.AccessLevel.SUPERUSER
-});
-
-console.log(mango.email); // mango@mail.com
-console.log(mango.accessLevel); // superuser
-mango.blacklist('poly@mail.com');
-console.log(mango.blacklistedEmails); // 'poly@mail.com'
-console.log(mango.isBlacklisted('mango@mail.com')); //  false
-console.log(mango.isBlacklisted('poly@mail.com')); // true 
-
+cc(10); cc(J); cc(Q); cc('K'); cc('A');
