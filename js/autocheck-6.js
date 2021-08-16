@@ -200,9 +200,9 @@
 //////////// ? #15
 //* Дополни код так, чтобы в переменной evenNumbers получился массив чётных чисел из массива numbers, а в переменной oddNumbers массив нечётных.Обязательно используй метод filter().
 
-const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
-const evenNumbers = numbers.filter(number => number % 2 === 0);
-const oddNumbers = numbers.filter(number => number % 2 !== 0);
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
 
 //////////// ? #16
 //* Дополни код так, чтобы в переменной allGenres был массив всех жанров книг (свойство genres) из массива books, а в переменной uniqueGenres массив уникальных жанров - без повторений.
@@ -291,26 +291,355 @@ const oddNumbers = numbers.filter(number => number % 2 !== 0);
 //* Дополни функцию getActiveUsers(users) так, чтобы она возвращала массив активных пользователей, значение свойства isActive которых true
 
 // const getActiveUsers = (users) => {
-//   const isActiveUsers = users.filter(user => user.isActive)
-//   return isActiveUsers 
+//   const ActiveUsers = users.filter(user => user.isActive)
+//   return ActiveUsers 
 // };
 
 //////////// ? #23
+//* Дополни функцию getInactiveUsers(users) так, чтобы она возвращала массив неактивных пользователей, значение свойства isActive которых false.
+
+//  const getInactiveUsers = (users) => {
+//    const InactiveUsers = users.filter(user => !user.isActive)
+//    return InactiveUsers
+//  };
+
+
 //////////// ? #24
+//* Используя метод find() дополни код так, чтобы:
+
+//* В переменной bookWithTitle получился объект книги название которой (свойство title) совпадает со значением переменной BOOK_TITLE.
+//* В переменной bookByAuthor получился объект книги автор который (свойство author) совпадает со значением переменной AUTHOR
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'Сон смешного человека';
+// const AUTHOR = 'Роберт Шекли';
+
+// const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find(book => book.author === AUTHOR);
+
 //////////// ? #25
+//* Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого (свойство email) совпадает со значением параметра email.
+
+// const getUserWithEmail = (users, email) => {
+//   const userByEmail = users.find(user => user.email === email) 
+//   return userByEmail
+// };
 //////////// ? #26
+//* Используя метод every() дополни код так, чтобы:
+
+//* В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+//* В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+//* В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+//* В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+//* В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+//* В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+
+// const eachElementInFirstIsEven = firstArray.every(el => el % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(el => el % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(el => el % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(el => el % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(el => el % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(el => el % 2 !== 0);
+
 //////////// ? #27
+//* Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны(свойство isActive) и возвращала true или false
+
+// const isEveryUserActive = (users) => {
+//   const activeUsers = users.every(user => user.isActive)
+//   return activeUsers
+// };
+
+
 //////////// ? #28
+//* Используя метод some() дополни код так, чтобы:
+
+//* В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+//* В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+//* В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+//* В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+//* В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+//* В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const anyElementInFirstIsEven = firstArray.some(el => el % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(el => el % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(el => el % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(el => el % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(el => el % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(el => el % 2 !== 0);
+
 //////////// ? #29
+//* Дополни функцию isAnyUserActive(users) так, чтобы она проверяла наличие активных пользователей (свойство isActive) и возвращала true или false.
+
+// const isAnyUserActive = users => {
+//   const anyActiveUsers = users.some(user => user.isActive)
+//   return anyActiveUsers
+// };
+
 //////////// ? #30
+//* Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх.Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+// const totalPlayTime = playtimes.reduce((time, number) => {
+//   console.log(time + number)
+//   return time + number;
+//  }, 0);
+
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+
 //////////// ? #31
+//* Нашему сервису необходимо рассчитать среднее время проведённое в одной игре для каждого игрока, и получить общую сумму этих времён. Рассчитать время для каждого из игроков, можно разделив его время (свойство playtime) на количество игр (свойство gamesPlayed).
+
+// const players = [
+//   { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Киви', playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//   return total + player.playtime / player.gamesPlayed
+// }, 0);
+
 //////////// ? #32
+//* Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance) которые хранят пользователи из массива users.
+
+// const calculateTotalBalance = users => {
+//   let totalBalance = users.reduce((total, user) => {
+//      return total + user.balance
+//   }, 0)
+//   return totalBalance
+// };
+
 //////////// ? #33
+//* Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее количество друзей (свойство friends) всех пользователей из массива users.
+
+// const getTotalFriendCount = users => {
+
+//   const totalAmountOfFriends = users.reduce((total, user) => {
+//   return total + user.friends.length}
+// 	, 0)                                
+//       return totalAmountOfFriends
+// };
+
 //////////// ? #34
+//* Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский'
+// ];
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+// const alphabeticalAuthors = [...authors].sort();
+
 //////////// ? #35
+//* Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её возрастанию или убыванию. Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной descendingReleaseDates копия отсортированная по убыванию
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const ascendingReleaseDates = [...releaseDates].sort();
+// const descendingReleaseDates = [...releaseDates].sort((a,b) => b-a);
+
 //////////// ? #36
+//* Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors, а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
+
+// const authors = [
+//     'Ли Танит',
+//     'Бернард Корнуэлл',
+//     'Роберт Шекли',
+//     'Федор Достоевский',
+//     'Говард Лавкрафт'
+//   ];
+
+//   const authorsInAlphabetOrder = [...authors].sort((a,b) => a.localeCompare(b));
+//   const authorsInReversedOrder = [...authors].sort((a,b) => b.localeCompare(a));
+
 //////////// ? #37
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+
+// const sortedByAuthorName = [...books].sort((firstAuthor, secondAuthor) => firstAuthor.author.localeCompare(secondAuthor.author));
+
+// const sortedByReversedAuthorName = [...books].sort((firstAuthor, secondAuthor) => secondAuthor.author.localeCompare(firstAuthor.author));
+
+// const sortedByAscendingRating = [...books].sort((firstAuthor, secondAuthor) => firstAuthor.rating - secondAuthor.rating);
+
+// const sortedByDescentingRating = [...books].sort((firstAuthor, secondAuthor) => secondAuthor.rating - firstAuthor.rating);
+
 //////////// ? #38
+//* Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса (свойство balance).
+
+// const sortByAscendingBalance = users => {
+//   const sorted = [...users].sort((a, b) => a.balance - b.balance)
+//   console.log(sorted)
+//    return sorted
+// };
+
 //////////// ? #39
+//* Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей(свойство friends).
+
+// const sortByDescendingFriendCount = users => {
+
+//   const sorted = [...users].sort((a, b) => b.friends.length - a.friends.length)
+//   return sorted
+
+// };
+
 //////////// ? #40
+//* Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени (свойство name) в алфавитном порядке.
+
+// const sortByName = users => {
+//   const sorted = [...users].sort((a, b) => a.name.localeCompare(b.name))
+//   console.log(sorted)
+//   return sorted
+// };
+
+
 //////////// ? #41
+//* Дополни код так, чтобы в переменной names получился массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING.
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+//   { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+// ];
+
+// const MIN_BOOK_RATING = 8;
+// const names = [...books].filter(book => book.rating > MIN_BOOK_RATING).map(book => book.author).sort((a, b) => a.localeCompare(b));
+
+//////////// ? #42
+//* Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
+
+// const getNamesSortedByFriendCount = users => {
+//   const names = [...users].sort((a,b) => a.friends.length - b.friends.length).map(user => user.name)
+//   return names
+// };
+
+
+
+//////////// ? #43
+//* Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+
+// const getSortedFriends = users => {
+//   const sorted = [...users].flatMap(user => user.friends).filter((friend, index, array) => array.indexOf(friend) === index).sort((a, b) => a.localeCompare(b))
+  
+//   return sorted
+// };
+
+
+//////////// ? #44
+//* Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+
+
+// const getTotalBalanceByGender = (users, gender) => {
+  
+//   const total = [...users].filter(user => user.gender === gender).reduce((total, num) => {
+//         return total + num.balance
+//       }, 0)
+
+//       return (total)
+// };
+
+
+
+// getTotalBalanceByGender([
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male'
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female'
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male'
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female'
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male'
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male'
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female'
+//   }
+// ])
